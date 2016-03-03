@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.basketball_counter.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_orange_light"
+        android:fontFamily="sans-serif-white"
+        android:padding="10dp"
+        android:text="Basketball Counter"
+        android:textColor="@android:color/black"
+        android:textSize="25sp" />
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="70dp"
+        android:orientation="horizontal"
+        tools:context="com.example.android.basketball_counter.MainActivity">
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            tools:context="com.example.android.basketball_counter.MainActivity">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-white"
+                android:padding="10dp"
+                android:text="Team A"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ascore_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-white"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textSize="55sp" />
+
+
+            <Button
+                android:id="@+id/btn_point3a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_light"
+                android:fontFamily="sans-serif-white"
+                android:onClick="updateScore"
+                android:padding="18dp"
+                android:text="+3 Points"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:id="@+id/btn_point2a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_light"
+                android:fontFamily="sans-serif-white"
+                android:onClick="updateScore"
+                android:padding="18dp"
+                android:text="+2 Points"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:id="@+id/btn_point1a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_light"
+                android:fontFamily="sans-serif-white"
+                android:onClick="updateScore"
+                android:padding="18dp"
+                android:text="Free Throw"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+android:gravity="right"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginLeft="75dp"
+            tools:context="com.example.android.basketball_counter.MainActivity">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-white"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Team B"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/bscore_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-white"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="0"
+                android:textColor="@android:color/black"
+                android:textSize="55sp" />
+
+
+            <Button
+                android:id="@+id/btn_point3b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_light"
+                android:fontFamily="sans-serif-white"
+                android:onClick="updateScore"
+                android:padding="18dp"
+                android:text="+3 Points"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:id="@+id/btn_point2b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_light"
+                android:fontFamily="sans-serif-white"
+                android:onClick="updateScore"
+                android:padding="18dp"
+                android:text="+2 Points"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+
+            <Button
+                android:id="@+id/btn_point1b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:background="@android:color/holo_orange_light"
+                android:fontFamily="sans-serif-white"
+                android:onClick="updateScore"
+                android:padding="18dp"
+                android:text="Free Throw"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:background="@android:color/holo_orange_light"
+        android:fontFamily="sans-serif-white"
+        android:onClick="updateScore"
+        android:padding="15dp"
+        android:text="Reset"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
+

@@ -1,0 +1,90 @@
+package com.example.android.basketball_counter;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.TextView;
+
+
+/**
+ * This app is for the basketball counter
+ */
+public class MainActivity extends AppCompatActivity {
+
+    int score_total_teamA ;
+    int score_total_teamB ;
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+
+    /**
+     * This method is called when the order button is clicked.
+     */
+    public void updateScore(View view) {
+
+        switch(view.getId())
+        {
+            case (R.id.btn_point1a):
+                score_total_teamA=score_total_teamA+1;
+                displayScoreA(score_total_teamA);
+                break;
+
+            case (R.id.btn_point2a):
+                score_total_teamA=score_total_teamA+2;
+                displayScoreA(score_total_teamA);
+                break;
+
+            case (R.id.btn_point3a):
+                score_total_teamA=score_total_teamA+3;
+                displayScoreA(score_total_teamA);
+                break;
+
+            case (R.id.btn_point1b):
+                score_total_teamB=score_total_teamB+1;
+                displayScoreB(score_total_teamB);
+                break;
+
+            case (R.id.btn_point2b):
+                score_total_teamB=score_total_teamB+2;
+                displayScoreB(score_total_teamB);
+                break;
+
+            case (R.id.btn_point3b):
+                score_total_teamB=score_total_teamB+3;
+                displayScoreB(score_total_teamB);
+                break;
+
+            //btn_reset
+            case (R.id.btn_reset):
+                score_total_teamA=0;
+                score_total_teamB=0;
+                displayScoreA(score_total_teamA);
+                displayScoreB(score_total_teamB);
+                break;
+        }
+
+    }
+
+
+
+    /**
+     * This method displays the score  on the screen.
+     */
+    private void displayScoreA(int number) {
+        TextView scoretva= (TextView) findViewById(R.id.ascore_text_view);
+        // scoreTV.setText(NumberFormat.getCurrencyInstance().format(number));
+        scoretva.setText("" + number);
+    }
+
+    private void displayScoreB(int number) {
+        TextView scoretvb = (TextView) findViewById(R.id.bscore_text_view);
+        // bscore_text_view.setText(NumberFormat.getCurrencyInstance().format(number));
+        scoretvb.setText("" + number);
+    }
+
+}
